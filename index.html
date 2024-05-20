@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="Exploring the Orthogonality and Linearity of Backdoor Attacks">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Exploring the Orthogonality and Linearity of Backdoor Attacks</title>
+
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+<!-- <nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+</nav> -->
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">Exploring the Orthogonality and Linearity of Backdoor Attacks</h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://kaiyuanzhang.com/">Kaiyuan Zhang</a><sup>1*</sup>,</span>
+            <span class="author-block">
+              <a href="https://www.cs.purdue.edu/homes/cheng535/">Siyuan Cheng</a><sup>1*</sup>,</span>
+            <span class="author-block">
+              <a href="https://sites.google.com/view/guangyushen/home">Guangyu Shen</a><sup>1</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://www.cs.purdue.edu/homes/taog/">Guanhong Tao</a><sup>1</sup>,
+            </span>
+            <br>
+            <span class="author-block">
+              <a href="https://www.cs.purdue.edu/homes/an93/">Shengwei An</a><sup>1</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://www.cs.purdue.edu/homes/amakur/">Anuran Makur</a><sup>1</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://people.cs.umass.edu/~shiqingma/">Shiqing Ma</a><sup>2</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://www.cs.purdue.edu/homes/xyzhang/">Xiangyu Zhang</a><sup>1</sup>
+            </span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1</sup>Purdue University,</span>
+            <span class="author-block"><sup>2</sup>University of Massachusetts, Amherst,</span>
+            <span><sup>*</sup>Equal Contribution</span>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <a href="https://kaiyuanzhang.com/publications/SP24_Backdoor.pdf"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href="https://github.com/KaiyuanZh/OrthogLinearBackdoor"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
+              </span>
+              <!-- Video Link. -->
+              <span class="link-block">
+                <a href="./"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-youtube"></i>
+                  </span>
+                  <span>Video (coming soon)</span>
+                </a>
+              </span>
+              <!-- slides -->
+              <span class="link-block">
+                <a href="./"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-powerpoint"></i>
+                  </span>
+                  <span>Slides (coming soon)</span>
+                </a>
+              </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<div style="text-align: center; display: flex; justify-content: center; align-items: center; flex-wrap: wrap;">
+  <img src="./static/gifs/orthogonality.gif" alt="illustrative-example"
+      style="margin-right: 5px; max-width: 1000px; width: 29%; height: auto;" />
+  <img src="./static/images/parameter_space.png" alt="illustrative-example"
+      style="margin-right: 5px; max-width: 1000px; width: 20%; height: auto;" />
+  <img src="./static/gifs/linearity.gif" alt="illustrative-example"
+      style="max-width: 1000px; width: 29%; height: auto;" />
+  <img src="./static/gifs/backdoor_neurons.gif" alt="illustrative-example"
+      style="margin-right: 5px; max-width: 1000px; width: 20%; height: auto;" />
+</div>
+
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Abstract</h2>
+
+        <div class="content has-text-justified">
+          <p>
+            Backdoor attacks embed an attacker-chosen pattern into inputs to cause model misclassification. 
+            This security threat to machine learning has been a long concern. There are a number of defense techniques proposed by the community. 
+            <i>Do they work for a large spectrum of attacks?</i>
+          </p>
+          <p>
+            As we argue that they are significant and prevalent in contemporary research, and we conduct a systematic study on
+            14 attacks and 12 defenses. Our empirical results show that existing defenses often fail on certain attacks. 
+            To understand the reason, we study the characteristics of backdoor attacks through
+            theoretical analysis. 
+            Particularly, we formulate backdoor poisoning as a continual learning task, and introduce two key
+            properties: <b>orthogonality</b> and <b>linearity</b>. These two characteristics
+            in-depth explain how backdoors are learned by models from
+            a theoretical perspective. This helps to understand the reason
+            behind the failure of various defense techniques. Through
+            our study, we highlight open challenges in defending against
+            backdoor attacks and provide future directions.
+          </p>
+          <div style="text-align:center;">
+            <img src="./static/images/poster.png" alt="illustrative-example"
+                style="margin: 0 auto; display: block; max-width: 1000px; width: 100%; height: auto;" />
+            <br>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->  
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+          <div class="columns is-centered">
+            <div class="column is-full-width">
+              <h2 class="title is-3">Evaluation Metric</h2>
+            
+
+                    <div class="content has-text-justified">
+
+
+
+                      <div class="columns is-centered">
+                        <div class="column" >
+                          <div class="content">
+                            <h4 class="title is-5"><b>Orthogonality</b> (<i>Orth.</i>)</h4>
+                            <p>
+                              For Orthogonality, we measure the angle between the benign and backdoor gradients. 
+                              This metric quantifies the radians, providing a clear indication of how distinct the backdoor behavior is from normal operations. 
+                              The formula we use, which involves the arc cosine of the dot product normalized by the magnitudes of these gradients, is detailed in our paper.
+                            </p>
+                            <div style="text-align:center;">
+                              <img src="./static/images/metric_orth.png" alt="illustrative-example"
+                                  style="margin: 0 auto; display: block; width: 75%; height: auto;" />
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="column">
+                          <h4 class="title is-5"><b>Linearity</b> (<i>Linear.</i>)</h4>
+                          <div class="columns is-centered">
+                            <div class="column content">
+                              <p>
+                                The Linearity metric assesses the linear relationship between changes in inputs and outputs across 
+                                each layer of the sub-network. We use linear regression to analyze this relationship, with R<sup>2</sup> values 
+                                indicating the strength of linearity. This helps us understand how predictable the changes 
+                                due to the backdoor are, compared to normal input-output relationships.
+                              </p>
+                              <div style="text-align:center;">
+                                <img src="./static/images/metric_linear.png" alt="illustrative-example"
+                                    style="margin: 0 auto; display: block; width: 80%; height: auto;" />
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                  </div>
+
+              </div>
+            </div>
+          </div>
+
+      </div>
+    </div>
+  </div>
+
+
+  <section class="section">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column is-full-width">
+          <h2 class="title is-3">Experiments</h2>
+          <h4 class="title is-5">Orthogonality and Linearity Scores of Existing Attacks.</h4>
+  
+          <div class="content has-text-justified">
+            <p>Building upon our theoretical analysis, the empirical evaluation of orthogonality and linearity serves as a concrete
+              manifestation of the theoretical constructs, demonstrating
+              how the inherent characteristics of backdoor attacks. We
+              conduct an extensive assessment of orthogonality and linearity scores for 14 well-established backdoor attacks, utilizing the CIFAR-10 dataset and the ResNet-18 model. Our
+              findings are presented in the following table.
+            </p>
+            <div style="text-align:center;">
+              <img src="./static/images/exp_measure.png" alt="illustrative-example"
+                  style="margin: 0 auto; display: block; max-width: 1000px; width: 60%; height: auto;" />
+              <br>
+            </div>
+          </div>
+
+          <h4 class="title is-5">  Evaluation of Various Defense Methods Against Existing Attacks.</h4>
+          <div class="content has-text-justified">
+            <p>
+              We conduct an in-depth analysis to assess the effectiveness of 12 defense
+              methods against various attacks on the CIFAR-10 and GTSRB datasets, using both ResNet-18 and WRN models.
+              Our findings are summarized in the following table.
+            </p>
+            <div style="text-align:center;">
+              <img src="./static/images/exp_bigtable.png" alt="illustrative-example"
+                  style="margin: 0 auto; display: block; max-width: 1000px; width: 90%; height: auto;" />
+              <br>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">To Be Updated ...</h2>
+    
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>
+      @inproceedings{zhang2024exploring,
+        title={Exploring the Orthogonality and Linearity of Backdoor Attacks},
+        author={Zhang, Kaiyuan and Cheng, Siyuan and Shen, Guangyu and Tao, Guanhong and An, Shengwei and Makur, Anuran and Ma, Shiqing and Zhang, Xiangyu},
+        booktitle={2024 IEEE Symposium on Security and Privacy (SP)},
+        pages={225--225},
+        year={2024},
+        url={https://doi.ieeecomputersociety.org/10.1109/SP54263.2024.00182},
+        organization={IEEE Computer Society}
+      }
+    </code></pre>
+  </div>
+</section>
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            This website is licensed under a <a rel="license"
+                                                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+          <p>
+            We base the design of this website on <a
+              href="https://github.com/nerfies/nerfies.github.io">source code</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
