@@ -21,6 +21,16 @@
   <script src="./static/js/bulma-carousel.min.js"></script>
   <script src="./static/js/bulma-slider.min.js"></script>
   <script src="./static/js/index.js"></script>
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-0WZM51TR63"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-0WZM51TR63');
+  </script>
 </head>
 <body>
 
@@ -173,6 +183,81 @@
     <!--/ Abstract. -->  
   </div>
 </section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Observations</h2>
+        <div class="content has-text-justified">
+          <b>Key Observation</b>: Backdoor task is quickly learned much faster than the main task (clean).
+          <div style="text-align:center;">
+            <img src="./static/images/observation.png" alt="illustrative-example"
+                style="margin: 0 auto; display: block; max-width: 1000px; width: 80%; height: auto;" />
+          </div>
+          Our observations indicate that the model rapidly learns the backdoor tasks within the first 10 epochs, as highlighted in the green boxes. 
+          Meanwhile, the learning of the clean task progresses more gradually.
+          From this, we conceptualize backdoor learning as a two-phase continual learning process. 
+          Initially, there is a rapid learning phase for the backdoor task followed by a slower, more gradual phase where the model learns the clean task.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Backdoor Orthogonality</h2>
+        <div class="content has-text-justified">
+          <div style="text-align: center; display: flex; justify-content: center; align-items: center; flex-wrap: wrap;">
+            <img src="./static/gifs/orthogonality.gif" alt="illustrative-example"
+                style="margin-right: 5px; max-width: 1000px; width: 55%; height: auto;" />
+            <img src="./static/images/parameter_space.png" alt="illustrative-example"
+                style="margin-right: 5px; max-width: 1000px; width: 30%; height: auto;" />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Backdoor Linearity</h2>
+        <div class="content has-text-justified">
+          <div style="text-align: center; display: flex; justify-content: center; align-items: center; flex-wrap: wrap;">
+            <img src="./static/gifs/linearity.gif" alt="illustrative-example"
+                style="max-width: 1000px; width: 60%; height: auto;" />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">How Orthogonality and Linearity Can Help?</h2>
+
+        <h4 class="title is-5">How Orthogonality Helps?</h4>
+        <div class="content has-text-justified">
+          <div style="text-align: center; display: flex; justify-content: center; align-items: center; flex-wrap: wrap;">
+            <img src="./static/gifs/backdoor_neurons.gif" alt="illustrative-example"
+              style="margin-right: 5px; max-width: 1000px; width: 50%; height: auto;" />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
 
 
 <section class="section">
