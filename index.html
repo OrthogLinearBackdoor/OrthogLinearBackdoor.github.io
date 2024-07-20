@@ -3,9 +3,9 @@
 <head>
   <meta charset="utf-8">
   <meta name="description"
-        content="Exploring the Orthogonality and Linearity of Backdoor Attacks">
+        content="Exploring the Orthogonality and Linearity of Backdoor Attacks (IEEE S&P)">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Exploring the Orthogonality and Linearity of Backdoor Attacks</title>
+  <title>Exploring the Orthogonality and Linearity of Backdoor Attacks (IEEE S&P)</title>
 
 
   <link rel="stylesheet" href="./static/css/bulma.min.css">
@@ -50,7 +50,7 @@
     <div class="container is-max-desktop">
       <div class="columns is-centered">
         <div class="column has-text-centered">
-          <h1 class="title is-1 publication-title">Exploring the Orthogonality and Linearity of Backdoor Attacks</h1>
+          <h1 class="title is-1 publication-title">Exploring the Orthogonality and Linearity of Backdoor Attacks (IEEE S&P 2024)</h1>
           <div class="is-size-5 publication-authors">
             <span class="author-block">
               <a href="https://kaiyuanzhang.com/">Kaiyuan Zhang</a><sup>1*</sup>,</span>
@@ -107,12 +107,12 @@
               </span>
               <!-- Video Link. -->
               <span class="link-block">
-                <a href="./"
+                <a href="https://www.youtube.com/watch?v=bWkTVJ2nYlo"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fab fa-youtube"></i>
                   </span>
-                  <span>Video (coming soon)</span>
+                  <span>Video</span>
                 </a>
               </span>
               <!-- slides -->
@@ -211,6 +211,7 @@
           From this, we conceptualize backdoor learning as a two-phase continual learning process. 
           Initially, there is a rapid learning phase for the backdoor task followed by a slower, more gradual phase where the model learns the clean task.
         </div>
+        <b>Take Away:</b> We theoretically formulate backdoor learning with two key properties: <b>orthogonality</b> and <b>linearity</b>, and in-depth explain how backdoors are learned by models.
       </div>
     </div>
   </div>
@@ -222,6 +223,11 @@
     <div class="columns is-centered">
       <div class="column is-full-width">
         <h2 class="title is-3">Backdoor Orthogonality</h2>
+        <p>Orthogonality illustrates the backdoor behavior minimally
+          interferes with the model’s performance on clean data. This
+          is characterized by the perpendicular relationship between
+          backdoor gradients and clean gradients during the training
+          process.</p>
         <div class="content has-text-justified">
           <div style="text-align: center; display: flex; justify-content: center; align-items: center; flex-wrap: wrap;">
             <img src="./static/gifs/orthogonality.gif" alt="illustrative-example"
@@ -239,6 +245,11 @@
     <div class="columns is-centered">
       <div class="column is-full-width">
         <h2 class="title is-3">Backdoor Linearity</h2>
+        <p>Linearity specifies the linear relationship of poisoned
+          inputs and the output target. There exists a hyperplane that
+          separates the model decision space into two disjoint regions,
+          where the backdoor behavior is in one region and the clean
+          behavior is in the other.</p>
         <div class="content has-text-justified">
           <div style="text-align: center; display: flex; justify-content: center; align-items: center; flex-wrap: wrap;">
             <img src="./static/gifs/linearity.gif" alt="illustrative-example"
@@ -255,8 +266,22 @@
     <div class="columns is-centered">
       <div class="column is-full-width">
         <h2 class="title is-3">How Orthogonality and Linearity Can Help?</h2>
-
+        <p>These two characteristics
+        in-depth explain how backdoors are learned by models from
+        a <b>theoretical perspective</b>. This helps to understand the reason
+        behind the failure of various defense techniques.</p>
+        <br>
         <h4 class="title is-5">How Orthogonality Helps?</h4>
+        <p>In Section 5.3, we launch six attack variations
+          by changing orthogonality and linearity and evaluate how
+          they affect the attack effectiveness. For example, our results
+          in Table 9 show that Label-specific Poisoning will reduce
+          the orthogonality of Patch attacks, thus making it
+          more robust against NAD defenses. The two properties
+          theoretically explain how backdoor behaviors are learned
+          by the model and how the poisoned model exhibit such
+          behaviors, regardless of backdoor attack configurations (e.g.
+          trigger patterns).</p>
         <div class="content has-text-justified">
           <div style="text-align: center; display: flex; justify-content: center; align-items: center; flex-wrap: wrap;">
             <img src="./static/gifs/backdoor_neurons.gif" alt="illustrative-example"
@@ -366,19 +391,6 @@
       </div>
     </div>
   </section>
-
-
-<section class="section">
-  <div class="container is-max-desktop">
-    <div class="columns is-centered">
-      <div class="column is-full-width">
-        <h2 class="title is-3">To Be Updated ...</h2>
-    
-      </div>
-    </div>
-  </div>
-</section>
-
 
 
 <section class="section" id="BibTeX">
